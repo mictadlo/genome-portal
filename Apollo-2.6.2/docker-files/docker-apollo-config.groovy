@@ -139,6 +139,23 @@ apollo {
             "active": checkBooleanEnvironment("WEBAPOLLO_USER_PASSWORD_AUTH",true)
         ]
     ]
+    sequence_search_tools   {
+      blat_nuc      {
+         search_exe = "/usr/bin/blastn"
+         search_class = "org.bbop.apollo.sequence.search.blast.BlastCommandLine"
+         name = "Blast nucleotide"
+         params = "-num_threads 2"
+         //tmp_dir = "/efs/apollo/tmp"
+
+      }
+      blat_prot      {
+          search_exe = "/usr/bin/tblastn"
+          search_class = "org.bbop.apollo.sequence.search.blast.BlastCommandLine"
+          name = "Blast protein to translated nucleotide"
+          params = "-num_threads 2"
+          //tmp_dir = "/efs/apollo/tmp"
+      }
+   }
 }
 
 jbrowse {

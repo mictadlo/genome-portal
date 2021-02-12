@@ -34,6 +34,13 @@
         <b:Column size="MD_2"><b:Button ui:field="loginButton" type="PRIMARY">Login</b:Button></b:Column>
       </b:Row>
     </b:Container>
+ 
+    <b:Row styleName="{style.spacer}">
+          <gwt:HTML styleName="{style.inline-html}">
+               <h4>Access Disclaimer:</h4> As a public service ...
+               For Public access, please use <b>username:</b> anonymous@apollo.au  and  <b>password</b>: anonymous
+          </gwt:HTML>
+    </b:Row>
 
     <b:Row styleName="{style.spacer}">
       <b:Anchor text="Browse public genomes" href="../jbrowse/"/>

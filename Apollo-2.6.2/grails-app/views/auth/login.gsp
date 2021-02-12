@@ -10,6 +10,13 @@
         <div class="message">${flash.message}</div>
     </g:if>
     <g:form action="signIn">
+        <br/>
+        <hr/>
+        <b>Access Disclaimer</b>: As a public service...
+        <br>
+            For Public access, please use <b>username:</b> anonymous@apollo.au  and  <b>password</b>: anonymous
+        <br/>
+        <br/>
         <input type="hidden" name="targetUri" value="${targetUri}" class="col-md-4"/>
         <div class="col-md-5 col-lg-offset-1" style="margin-top: 10px;">
             <input name="username" value="${username}" type="username" class="form-control col-md-4"

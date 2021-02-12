@@ -15,7 +15,7 @@ RUN apt-get -qq update --fix-missing && \
 	apt-get --no-install-recommends -y install \
 	git locales locales-all build-essential libpq-dev wget python3-pip \
 	lsb-release gnupg2 wget xmlstarlet netcat libpng-dev postgresql-common \
-	zlib1g-dev libexpat1-dev curl ssl-cert zip unzip openjdk-8-jdk-headless
+	zlib1g-dev libexpat1-dev curl ssl-cert zip unzip openjdk-8-jdk-headless ncbi-blast+
 
 RUN sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list' && \
     wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
@@ -72,7 +72,7 @@ ENV LANGUAGE=en_US.UTF-8
 
 RUN pip3 install setuptools
 RUN pip3 install wheel
-RUN pip3 install nose apollo==4.2.7
+RUN pip3 install nose apollo==4.2.10
 
 RUN curl -s get.sdkman.io | bash && \
      /bin/bash -c "source $HOME/.sdkman/bin/sdkman-init.sh && yes | sdk install grails 2.5.5" && \
